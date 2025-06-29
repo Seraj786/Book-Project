@@ -69,7 +69,7 @@ const ShopDetails = () => {
                 <ul className="d-flex">
                   <li><Link to="/">Home |</Link> </li>
                   <li><Link to="/shop">Product |</Link> </li>
-                  <li> Product Details </li>
+                  <li> {pname} </li>
                 </ul>
               </div>
             </div>
