@@ -150,7 +150,7 @@ img.logo-header {
 }
 
 .banner-section {
-    background: url(./src/assets/images/banner1.jpg);
+    background: url(/public/banner1.jpg);
     height: 650px;
     width: 100%;
     display: flex;
