@@ -3,7 +3,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { IoCloseOutline } from "react-icons/io5";
 import { FaUser, FaSearch, FaShoppingCart } from "react-icons/fa";
-
 import logo from '../assets/images/logo.png'
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
@@ -18,20 +17,22 @@ const Header = () => {
 
 
   const filteredProducts = data.filter((product) =>
-    product.pname.toLowerCase().includes(searchTerm.toLowerCase()) || 
-    product.category.toLowerCase().includes(searchTerm.toLowerCase())||
+    product.pname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
     product.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
     product.publisher.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-// cart functionality
+  // cart functionality
 
-const {cartItems} = useSelector((state) => state.cart);
+  const { cartItems } = useSelector((state) => state.cart);
 
 
 
   return (
     <div>
+      
+
       <div className='main_nav'>
         <div className='container'>
           <Navbar expand="lg">
@@ -39,7 +40,7 @@ const {cartItems} = useSelector((state) => state.cart);
               <Link to="./" className='text-white fs-2 text-uppercase'>
                 <img className='logo-header logo' src={logo} alt='logo' />
               </Link>
-              
+
               <Navbar.Toggle aria-controls="navbarScroll" />
               <Navbar.Collapse id="navbarScroll">
                 <Nav className="mx-auto my-2 my-lg-0">
@@ -90,10 +91,10 @@ const {cartItems} = useSelector((state) => state.cart);
                         {filteredProducts.length > 0 ? (
                           filteredProducts.map((product, index) => (
                             <li key={index} className="w-100 list-group-item d-flex justify-content-between align-items-center">
-                             <Link onClick={() => setOpen(false)} to={`/products/${product.id}`}> <p>{product.pname}</p></Link>
+                              <Link onClick={() => setOpen(false)} to={`/products/${product.id}`}> <p>{product.pname}</p></Link>
                               <p><img src={product.productimage} alt='img' /></p>
                             </li>
-                      ))
+                          ))
                         ) : (
                           <li className="text-muted">
                             <p className='no-products'>Sorry, we couldn't find any matching products.</p>
@@ -105,7 +106,7 @@ const {cartItems} = useSelector((state) => state.cart);
                 </div>
               </div>
             </div>
-            <div className='overlay' onClick={() => setOpen(false)}><IoCloseOutline/></div>
+            <div className='overlay' onClick={() => setOpen(false)}><IoCloseOutline /></div>
           </div>
         </div>
         : ""}

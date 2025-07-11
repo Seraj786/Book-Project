@@ -1,13 +1,16 @@
-import Breadcrumbs from "../Components/Breadcrumbs";
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import { FaStar } from "react-icons/fa6";
 
 import { Link, useParams } from "react-router-dom";
 import useGetSingleProduct from "../hook/useGetSingleProduct";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, increamentProduct, decrementProduct } from "../cart/cartSlice";
+import {
+  addToCart,
+  increamentProduct,
+  decrementProduct,
+} from "../cart/cartSlice";
 import { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 
@@ -56,7 +59,7 @@ const ShopDetails = () => {
     topic,
     Lesson,
     pages,
-    publishedDate
+    publishedDate,
   } = singleProduct;
 
   return (
@@ -67,8 +70,12 @@ const ShopDetails = () => {
             <div className="col-lg-12">
               <div className="bread-crumb-inner">
                 <ul className="d-flex">
-                  <li><Link to="/">Home |</Link> </li>
-                  <li><Link to="/shop">Product |</Link> </li>
+                  <li>
+                    <Link to="/">Home |</Link>{" "}
+                  </li>
+                  <li>
+                    <Link to="/shop">Product |</Link>{" "}
+                  </li>
                   <li> {pname} </li>
                 </ul>
               </div>
@@ -91,7 +98,11 @@ const ShopDetails = () => {
                   <div className="product-details">
                     <h2>{pname}</h2>
                     <div className="rating">
-                      <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
+                      <FaStar />
                     </div>
 
                     <div className="book-details">
@@ -119,15 +130,27 @@ const ShopDetails = () => {
 
                     <div className="pro-price-section mt-4 d-flex">
                       <div className="p-price">
-                        <h5 className="fs-1"> ${(pprice * (cartProduct?.cartQuantity || 1)).toFixed(2)}
+                        <h5 className="fs-1">
+                          {" "}
+                          $
+                          {(pprice * (cartProduct?.cartQuantity || 1)).toFixed(
+                            2
+                          )}
                           <span className="text-decoration-line-through fs-5">
                             ${discountPrice}
-                          </span></h5>
+                          </span>
+                        </h5>
                       </div>
 
                       <div className="price-update-btn mx-3">
                         <div className="input-group">
-                          <button className="btn btn-outline-secondary" type="button" onClick={handleDecrement}>-</button>
+                          <button
+                            className="btn btn-outline-secondary"
+                            type="button"
+                            onClick={handleDecrement}
+                          >
+                            -
+                          </button>
                           <input
                             type="text"
                             id="quantity"
@@ -135,13 +158,26 @@ const ShopDetails = () => {
                             value={cartProduct ? cartProduct.cartQuantity : 1}
                             readOnly
                           />
-                          <button className="btn btn-outline-secondary" type="button" onClick={handleIncrement}>+</button>
+                          <button
+                            className="btn btn-outline-secondary"
+                            type="button"
+                            onClick={handleIncrement}
+                          >
+                            +
+                          </button>
                         </div>
                       </div>
 
                       <div className="quantity-and-btn">
-                        <Link to="/cart" className="main-btn" onClick={() => handleAddToCart(singleProduct)}>
-                          <span className="me-2 fs-5"><PiShoppingCartSimpleFill /></span>Add to Cart
+                        <Link
+                          to="/cart"
+                          className="main-btn"
+                          onClick={() => handleAddToCart(singleProduct)}
+                        >
+                          <span className="me-2 fs-5">
+                            <PiShoppingCartSimpleFill />
+                          </span>
+                          Add to Cart
                         </Link>
                       </div>
                     </div>
@@ -158,22 +194,57 @@ const ShopDetails = () => {
           <div className="row">
             <div className="col-lg-8">
               <div className="pro-details-content-left">
-                <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">
-                  <Tab eventKey="profile" title="Descriptions" className="tab-text">
+                <Tabs
+                  defaultActiveKey="home"
+                  id="uncontrolled-tab-example"
+                  className="mb-3"
+                >
+                  <Tab
+                    eventKey="profile"
+                    title="Descriptions"
+                    className="tab-text"
+                  >
                     <p>{Decriptions}</p>
                   </Tab>
                   <Tab eventKey="home" title="Details of Book">
                     <table className="table border book-overview">
                       <tbody>
-                        <tr><th>Book Title</th><td>{pname}</td></tr>
-                        <tr><th>Author</th><td>{author}</td></tr>
-                        <tr><th>Ediiton Language</th><td>{language}</td></tr>
-                        <tr><th>Book Format</th><td>{bookFormat}</td></tr>
-                        <tr><th>Date Published</th><td>{publishedDate}</td></tr>
-                        <tr><th>Publisher</th><td>{publisher}</td></tr>
-                        <tr><th>Pages</th><td>{pages}</td></tr>
-                        <tr><th>Lesson</th><td>{Lesson}</td></tr>
-                        <tr><th>Topic</th><td>{topic}</td></tr>
+                        <tr>
+                          <th>Book Title</th>
+                          <td>{pname}</td>
+                        </tr>
+                        <tr>
+                          <th>Author</th>
+                          <td>{author}</td>
+                        </tr>
+                        <tr>
+                          <th>Ediiton Language</th>
+                          <td>{language}</td>
+                        </tr>
+                        <tr>
+                          <th>Book Format</th>
+                          <td>{bookFormat}</td>
+                        </tr>
+                        <tr>
+                          <th>Date Published</th>
+                          <td>{publishedDate}</td>
+                        </tr>
+                        <tr>
+                          <th>Publisher</th>
+                          <td>{publisher}</td>
+                        </tr>
+                        <tr>
+                          <th>Pages</th>
+                          <td>{pages}</td>
+                        </tr>
+                        <tr>
+                          <th>Lesson</th>
+                          <td>{Lesson}</td>
+                        </tr>
+                        <tr>
+                          <th>Topic</th>
+                          <td>{topic}</td>
+                        </tr>
                       </tbody>
                     </table>
                   </Tab>
@@ -195,15 +266,20 @@ const ShopDetails = () => {
                       <h5>{product.pname}</h5>
                       <p className="mb-0">{product.author}</p>
                       <p className="fw-medium">${product.pprice}</p>
-                      <Link className="main-btn" onClick={() => handleAddToCart(product)}>
-                        <span className="me-2 fs-5"><PiShoppingCartSimpleFill /></span>Add to Cart
+                      <Link
+                        className="main-btn"
+                        onClick={() => handleAddToCart(product)}
+                      >
+                        <span className="me-2 fs-5">
+                          <PiShoppingCartSimpleFill />
+                        </span>
+                        Add to Cart
                       </Link>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </div>

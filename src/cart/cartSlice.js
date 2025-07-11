@@ -28,7 +28,7 @@ const cartSlice = createSlice({
     removeFromCart: (state, action) => {
       const filteredCart = state.cartItems.filter(c => c.id !== action.payload.id);
       state.cartItems = filteredCart;
-      
+
       alert("Removed from the Cart");
       localStorage.setItem("cartItems", JSON.stringify(filteredCart));
     },
@@ -50,7 +50,7 @@ const cartSlice = createSlice({
         (sum, item) => sum + (item.pprice) * item.cartQuantity,
         0
       );
-      state.cartGetTotal = (total.toFixed(2)); 
+      state.cartGetTotal = (total.toFixed(2));
 
       state.cartQuantity = state.cartItems.reduce(
         (qty, item) => qty + item.cartQuantity,

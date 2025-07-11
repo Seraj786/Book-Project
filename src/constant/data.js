@@ -67,35 +67,43 @@ export const bannerInfo = [
 export const authorInfo = [
     {
         "authImg": authorImg1,
-        "authName": "Erich Segal"
+        "authName": "Erich Segal",
+        "authorLink": "https://en.wikipedia.org/wiki/Erich_Segal"
     },
     {
         "authImg": authorImg2,
-        "authName": "Sylvia Plath"
+        "authName": "Sylvia Plath",
+        "authorLink": "https://en.wikipedia.org/wiki/Sylvia_Plath"
     },
     {
         "authImg": authorImg3,
-        "authName": "Stephen Coonts"
+        "authName": "Stephen Coonts",
+        "authorLink": "https://en.wikipedia.org/wiki/Stephen_Coonts"
     },
     {
         "authImg": authorImg4,
-        "authName": "William Wordsworth"
+        "authName": "William Wordsworth",
+        "authorLink": "https://en.wikipedia.org/wiki/William_Wordsworth"
     },
     {
         "authImg": authorImg5,
-        "authName": "Stephen King"
+        "authName": "Stephen King",
+        "authorLink": "https://en.wikipedia.org/wiki/Stephen_King"
     },
     {
         "authImg": authorImg6,
-        "authName": "Gillian Flynn"
+        "authName": "Gillian Flynn",
+        "authorLink": "https://en.wikipedia.org/wiki/Gillian_Flynn"
     },
     {
         "authImg": authorImg7,
-        "authName": "Gayle Forman"
+        "authName": "Gayle Forman",
+        "authorLink": "https://en.wikipedia.org/wiki/Gayle_Forman"
     },
     {
         "authImg": authorImg8,
-        "authName": "Arundhati Roy"
+        "authName": "Arundhati Roy",
+        "authorLink": "https://en.wikipedia.org/wiki/Arundhati_Roy"
     },
 ]
 
@@ -173,8 +181,8 @@ export const IconsBook = [
 ]
 
 export const ProductsCard = [
-    {        
-        Id:1,
+    {
+        Id: 1,
         pname: "Thunder Stunt",
         pprice: "$10.99",
         discountPrice: "$11.19",
@@ -183,7 +191,7 @@ export const ProductsCard = [
         author: "Jules Verne"
     },
     {
-        Id:2,
+        Id: 2,
         pname: "The Missadventure",
         pprice: "$14.00",
         discountPrice: "$12.25",
@@ -192,7 +200,7 @@ export const ProductsCard = [
         author: "Robert Louis"
     },
     {
-        Id:3,
+        Id: 3,
         pname: "The Adventure",
         pprice: "$21.25",
         discountPrice: "$22.50",
@@ -201,7 +209,7 @@ export const ProductsCard = [
         author: "Jack London"
     },
     {
-        Id:4,
+        Id: 4,
         pname: "A Princess of Mars",
         pprice: "$31.50",
         discountPrice: "$32.49",
@@ -210,7 +218,7 @@ export const ProductsCard = [
         author: "Wilbur Smith"
     },
     {
-        Id:5,
+        Id: 5,
         pname: "Healing Her Heart",
         pprice: "$12.99",
         discountPrice: "$14.99",
@@ -220,7 +228,7 @@ export const ProductsCard = [
 
     },
     {
-        Id:6,
+        Id: 6,
         pname: "The Unveiling",
         pprice: "$10.00",
         discountPrice: "#11.95",
@@ -229,7 +237,7 @@ export const ProductsCard = [
         author: "Colleen Hoover"
     },
     {
-        Id:7,
+        Id: 7,
         pname: "The Demon Girl",
         pprice: "$11.99",
         discountPrice: "$12.49",
@@ -238,7 +246,7 @@ export const ProductsCard = [
         author: "Jane Austen"
     },
     {
-        Id:8,
+        Id: 8,
         pname: "Twelve Days Of Passion",
         pprice: "$17.35",
         discountPrice: "$19.00",
@@ -247,7 +255,7 @@ export const ProductsCard = [
         author: "Nora Roberts"
     },
     {
-        Id:9,
+        Id: 9,
         pname: "Sheiks Desert Duty",
         pprice: "$19.95",
         discountPrice: "$20.99",
@@ -255,9 +263,9 @@ export const ProductsCard = [
         category: "Romance",
         author: "Jojo Moyes"
     },
-    
+
     {
-        Id:10,
+        Id: 10,
         pname: "A Heavy Lift",
         pprice: "$28.60",
         discountPrice: "$30.50",
@@ -266,7 +274,7 @@ export const ProductsCard = [
         author: "Stephen King"
     },
     {
-        Id:11,
+        Id: 11,
         pname: "Homie",
         pprice: "$12.98",
         discountPrice: "$13.99",
@@ -275,7 +283,7 @@ export const ProductsCard = [
         author: "H.P. Lovecraft"
     },
     {
-        Id:12,
+        Id: 12,
         pname: "The Invisible Man",
         pprice: "$19.99",
         discountPrice: "$21.50",
@@ -284,7 +292,7 @@ export const ProductsCard = [
         author: "Clive Barker"
     },
     {
-        Id:13,
+        Id: 13,
         pname: "The Dunwich Horror",
         pprice: "$19.75",
         discountPrice: "$21.49",
@@ -294,7 +302,7 @@ export const ProductsCard = [
     },
 
     {
-        Id:14,
+        Id: 14,
         pname: "The Canterville Ghost",
         pprice: "$16.50",
         discountPrice: "$18.49",
@@ -305,7 +313,7 @@ export const ProductsCard = [
 
 
     {
-        Id:15,
+        Id: 15,
         pname: "The Time Machine",
         pprice: "$22.25",
         discountPrice: "$23.99",
@@ -315,7 +323,7 @@ export const ProductsCard = [
     },
 
     {
-        Id:16,
+        Id: 16,
         pname: "After the Cure",
         pprice: "$32.00",
         discountPrice: "$33.99",
@@ -324,7 +332,7 @@ export const ProductsCard = [
         author: "Arthur C. Clarke"
     },
     {
-        Id:17,
+        Id: 17,
         pname: "The Aliens",
         pprice: "$12.65",
         discountPrice: "$15.19",
@@ -333,7 +341,7 @@ export const ProductsCard = [
         author: "Philip K. Dick "
     },
     {
-        Id:18,
+        Id: 18,
         pname: "Dk Guide to Space",
         pprice: "$12.65",
         discountPrice: "$19.19",
@@ -343,7 +351,7 @@ export const ProductsCard = [
     },
 
     {
-        Id:19,
+        Id: 19,
         pname: "The Last Lecture: Really Achieving Your Childhood Dreams - Lessons In Living",
         pprice: "$25.65",
         discountPrice: "$26.19",
@@ -352,7 +360,7 @@ export const ProductsCard = [
         author: "Peter"
     },
     {
-        Id:20,
+        Id: 20,
         pname: "Autobiography Of A Yogi",
         pprice: "$15.75",
         discountPrice: "$16.19",
@@ -361,7 +369,7 @@ export const ProductsCard = [
         author: "Robort"
     },
     {
-        Id:21,
+        Id: 21,
         pname: "Art Of Happiness",
         pprice: "$19.99",
         discountPrice: "$20.19",
@@ -370,7 +378,7 @@ export const ProductsCard = [
         author: "Heart"
     },
     {
-        Id:22,
+        Id: 22,
         pname: "Magic",
         pprice: "$19.99",
         discountPrice: "$20.19",
@@ -379,7 +387,7 @@ export const ProductsCard = [
         author: "Heart"
     },
     {
-        Id:23,
+        Id: 23,
         pname: "Emotional Intelligence",
         pprice: "$21.99",
         discountPrice: "$22.19",
@@ -388,7 +396,7 @@ export const ProductsCard = [
         author: "John"
     },
     {
-        Id:24,
+        Id: 24,
         pname: "Intuition: Knowing Beyond Logic",
         pprice: "$21.99",
         discountPrice: "$22.19",
@@ -397,7 +405,7 @@ export const ProductsCard = [
         author: "Weak"
     },
     {
-        Id:25,
+        Id: 25,
         pname: "The Concise Laws Of Human Nature",
         pprice: "$45.99",
         discountPrice: "$47.19",
@@ -406,7 +414,7 @@ export const ProductsCard = [
         author: "Reel"
     },
     {
-        Id:26,
+        Id: 26,
         pname: "Romancing The Balance Sheet: For Anyone Who Owns, Runs Or Manages A Business",
         pprice: "$26.99",
         discountPrice: "$28.19",
@@ -415,7 +423,7 @@ export const ProductsCard = [
         author: "Hobart"
     },
     {
-        Id:27,
+        Id: 27,
         pname: "Essentialism Updated Edition (Lead Title)",
         pprice: "$31.99",
         discountPrice: "$33.19",
@@ -424,7 +432,7 @@ export const ProductsCard = [
         author: "Howards"
     },
     {
-        Id:28,
+        Id: 28,
         pname: "THE RICHEST MAN IN BABYLON (PB)",
         pprice: "$33.99",
         discountPrice: "$35.19",
@@ -433,7 +441,7 @@ export const ProductsCard = [
         author: "Helloward"
     },
     {
-        Id:29,
+        Id: 29,
         pname: "Leaders Eat Last",
         pprice: "$39.99",
         discountPrice: "$41.19",
@@ -442,7 +450,7 @@ export const ProductsCard = [
         author: "Hall"
     },
     {
-        Id:30,
+        Id: 30,
         pname: "Tales From Shakespeare Cymbeline And Other Stories (Tales From Shakespeare Series (6T))",
         pprice: "$46.99",
         discountPrice: "$48.19",
@@ -451,7 +459,7 @@ export const ProductsCard = [
         author: "johnson"
     },
     {
-        Id:31,
+        Id: 31,
         pname: "Tender Is The Night",
         pprice: "$22.99",
         discountPrice: "$24.19",
@@ -460,7 +468,7 @@ export const ProductsCard = [
         author: "Belly"
     },
     {
-        Id:32,
+        Id: 32,
         pname: "Little Dorrit",
         pprice: "$30.99",
         discountPrice: "$32.97",
@@ -469,7 +477,7 @@ export const ProductsCard = [
         author: "Welly"
     },
     {
-        Id:33,
+        Id: 33,
         pname: "Martin Chuzzlewit Tie In",
         pprice: "$19.99",
         discountPrice: "$22.97",
@@ -478,7 +486,7 @@ export const ProductsCard = [
         author: "keyand"
     },
     {
-        Id:34,
+        Id: 34,
         pname: "1984",
         pprice: "$9.99",
         discountPrice: "$11.97",
@@ -487,7 +495,7 @@ export const ProductsCard = [
         author: "layand"
     },
     {
-        Id:35,
+        Id: 35,
         pname: "The Brothers Karamazov",
         pprice: "$17.99",
         discountPrice: "$19.97",
