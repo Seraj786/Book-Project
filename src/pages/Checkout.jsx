@@ -193,10 +193,7 @@ const Checkout = () => {
                       </Link>
                       .
                     </p>
-                    <Link
-                      to="/thankyou"
-                      className="complete-btn btn btn-primary mt-3"
-                    >
+                    <Link to="/thankyou" className="main-btn mt-3">
                       Complete your Order
                     </Link>
                     {/* <button type="submit" className="complete-btn btn btn-primary mt-3">
