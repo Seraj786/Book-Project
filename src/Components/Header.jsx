@@ -14,13 +14,13 @@ const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const { data } = useContext(ProductContext);
 
-  // const filteredProducts = data.filter(
-  //   (product) =>
-  //     product.pname.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  //     product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  //     product.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  //     product.publisher.toLowerCase().includes(searchTerm.toLowerCase())
-  // );
+  const filteredProducts = data.filter(
+    (product) =>
+      product.pname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.publisher.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   // cart functionality
 
