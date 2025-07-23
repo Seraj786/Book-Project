@@ -13,7 +13,7 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const i = state.cartItems.findIndex(c => c.id === action.payload.id);
+      const i = state.cartItems.findIndex(c => c._id === action.payload._id);
       if (i >= 0) {
         alert("Already added to the Cart");
         return;
@@ -26,7 +26,7 @@ const cartSlice = createSlice({
     },
 
     removeFromCart: (state, action) => {
-      const filteredCart = state.cartItems.filter(c => c.id !== action.payload.id);
+      const filteredCart = state.cartItems.filter(c => c._id !== action.payload._id);
       state.cartItems = filteredCart;
 
       alert("Removed from the Cart");
@@ -34,13 +34,13 @@ const cartSlice = createSlice({
     },
 
     increamentProduct: (state, action) => {
-      const i = state.cartItems.findIndex(c => c.id === action.payload.id);
+      const i = state.cartItems.findIndex(c => c._id === action.payload._id);
       state.cartItems[i].cartQuantity += 1;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
 
     decrementProduct: (state, action) => {
-      const i = state.cartItems.findIndex(c => c.id === action.payload.id);
+      const i = state.cartItems.findIndex(c => c._id === action.payload._id);
       state.cartItems[i].cartQuantity -= 1;
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },

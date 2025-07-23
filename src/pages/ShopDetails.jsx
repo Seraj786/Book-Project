@@ -22,7 +22,7 @@ const ShopDetails = () => {
 
   const singleProduct = useGetSingleProduct(Id);
 
-  const cartProduct = cartItems.find((item) => item.id === Id);
+  const cartProduct = cartItems.find((item) => item._id === Id);
 
   const handleAddToCart = (product) => {
     const productWithQty = { ...product, cartQuantity: 1 };
@@ -44,6 +44,7 @@ const ShopDetails = () => {
   };
 
   if (singleProduct === null) return "Loading...";
+  console.log("abcdcd", singleProduct);
 
   const {
     publisher,
@@ -255,7 +256,7 @@ const ShopDetails = () => {
             <div className="col-lg-4">
               <h2>Related Books</h2>
               {data.slice(0, 2).map((product) => (
-                <div className="row align-items-center mb-2" key={product.id}>
+                <div className="row align-items-center mb-2" key={product._id}>
                   <div className="col-lg-4 col-6">
                     <div className="related-inner-img">
                       <img src={product.productimage} alt="img" />

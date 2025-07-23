@@ -15,8 +15,8 @@ const Layout = () => {
   const fetchData = async () => {
     const response = await fetch(`${API_BASE_URL}/products`);
     console.log("===API_BASE_URL", API_BASE_URL);
-    const result = await response.json();
-    setData(result);
+    const data = await response.json();
+    setData(data.result);
   };
 
   return (

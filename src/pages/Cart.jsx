@@ -120,7 +120,7 @@ const Cart = () => {
                 return (
                   <div className="col-md-4" key={idx}>
                     <div className="spritual-book-inner-prt">
-                      <Link to={`/products/${data.id}`}>
+                      <Link to={`/products/${data._id}`}>
                         <img src={data.productimage} alt={data.pname} />
                         <p className="mt-2 text-truncate fw-medium">
                           {data.pname}
