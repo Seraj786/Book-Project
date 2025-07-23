@@ -14,13 +14,13 @@ const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const { data } = useContext(ProductContext);
 
-  const filteredProducts = data.filter(
-    (product) =>
-      product.pname.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.publisher.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // const filteredProducts = data.filter(
+  //   (product) =>
+  //     product.pname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     product.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //     product.publisher.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
 
   // cart functionality
 
@@ -56,7 +56,7 @@ const Header = () => {
                   </Link>
                 </Nav>
 
-                <div className="searchform">
+                {/* <div className="searchform">
                   <Link
                     to={"#"}
                     onClick={() => setOpen(!open)}
@@ -64,7 +64,7 @@ const Header = () => {
                   >
                     <FaSearch />
                   </Link>
-                </div>
+                </div> */}
 
                 <div className="userIcon">
                   <Link to="./sign-in">
