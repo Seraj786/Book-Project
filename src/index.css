@@ -291,6 +291,8 @@ div#product-list {
 .product-img img {
   width: 90%;
   border-radius: 6px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
 }
 .product-item:hover img {
   filter: grayscale(1);
@@ -332,6 +334,9 @@ span.author-name {
 }
 .spritual-book-inner-prt img {
   border-radius: 8px;
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
 }
 
 .IconSection {
